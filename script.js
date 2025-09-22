@@ -17,3 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+ document.addEventListener("DOMContentLoaded", function() {
+        const currentPath = window.location.pathname.split('/').pop();
+        const navItems = document.querySelectorAll('.nav-item');
+
+        navItems.forEach(item => {
+            const itemPath = item.getAttribute('href').split('/').pop();
+            if (itemPath === currentPath || (currentPath === '' && itemPath === 'index.html')) {
+                item.classList.add('active');
+            }
+        });
+    });

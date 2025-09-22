@@ -94,7 +94,8 @@ body {
 }
 
 .logo img {
-    height: 100px;
+    height: 150px;
+    width: 150px;
 }
 
 .navbar {
@@ -205,7 +206,7 @@ h1 .blue-text {
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
 }
-
+/* #a47aff - good color for gradient*/
 .cta-primary {
     background: linear-gradient(#a653aac8,#8614d8c9); /* Placeholder for the blue button */
     color: white;
@@ -404,7 +405,7 @@ select {
     justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 20px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #fff;
 }
 
 .footer-section {
@@ -421,7 +422,7 @@ select {
 .footer-section.about h3,
 .footer-section.quick-links h3,
 .footer-section.contact-info-right h3 {
-    color: #dec95f; 
+    color: #fff; 
 
 }
 
@@ -433,8 +434,8 @@ select {
 }
 
 .footer-logo {
-    height: 50px;
-    width: auto;
+    height: 150px;
+    width: 150px;
 }
 
 .logo-container h3 {
@@ -443,9 +444,10 @@ select {
     color: #fff;
 }
 
-.tagline {
-    font-size: 0.85rem;
-    color: #c0c0c0;
+.taglines {
+    background-color: transparent;
+    font-size: 1rem;
+    color: #fff;
     margin: 0;
 }
 
@@ -463,7 +465,7 @@ select {
 
 .contact-info .label {
     font-weight: 600;
-    color: #ff6a8c; /* Example color for "Founder" and "Principal" */
+    color: #db5c7af9; /* Example color for "Founder" and "Principal" */
 }
 
 .footer-section ul {
@@ -480,7 +482,7 @@ select {
 
 .footer-section ul li a {
     text-decoration: none;
-    color: #c0c0c0;
+    color: #fff;
     font-size: 0.9rem;
     transition: color 0.3s;
     display: flex;
@@ -489,7 +491,7 @@ select {
 
 .footer-section ul li i {
     margin-right: 10px;
-    color: #87cfebbc ; /* Example icon color */
+    color: #60d2ff ; /* Example icon color */
 }
 
 .footer-section ul li a:hover {
@@ -500,10 +502,114 @@ select {
     text-align: center;
     padding-top: 20px;
     font-size: 0.8rem;
-    color: #888;
+    color: #fff;
+}
+/* Basic styling and layout for the container */
+.features-container {
+  display: grid;
+  /* Use a responsive grid with a minmax function to create flexible columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container on the page */
 }
 
+/* Styling for each feature card */
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
 
+.feature-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the icon placeholder */
+.icon-placeholder {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px; /* Center the icon and add space below */
+  background: linear-gradient(#a653aac8,#8614d8c9); /* Placeholder color, replace with your icon */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-placeholder i{
+    font-size: 2rem;
+    color: #fff; /* Icon color */
+}
+
+/* Styling for the text content */
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .features-container {
+    grid-template-columns: 1fr; /* Stack cards on top of each other on smaller devices */
+    gap: 15px;
+  }
+}
+
+/* For larger desktops, adjust the number of columns */
+@media (min-width: 1024px) {
+  .features-container {
+    grid-template-columns: repeat(4, 1fr); /* Four columns on larger screens */
+  }
+}
+/* 1. Main Section Container - for all devices */
+.why-choose-us-section {
+    max-width: 1200px; /* Limits the container's width on large screens */
+    margin: 40px auto; /* Centers the container horizontally */
+    padding: 20px; /* Adds internal spacing on all sides */
+}
+
+/* 2. Introductory Text Container - for all devices */
+.section-intro {
+    text-align: center; /* Centers the heading and paragraph */
+    margin-bottom: 40px; /* Adds space below the text intro */
+}
+
+/* 3. Heading (h2) - responsive font size */
+.section-intro h2 {
+    font-size: 2.5rem; /* A large, scalable font size for desktops */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 4. Paragraph (p) - responsive font size and line length */
+.section-intro p {
+    font-size: 1.1rem; /* A scalable font size */
+    color: #666;
+    max-width: 600px; /* Prevents the text from becoming too wide on large screens */
+    margin: 0 auto; /* Centers the paragraph to stay within the max-width */
+}
+
+/* 5. Media Query for smaller devices (e.g., mobile phones) */
+@media (max-width: 768px) {
+    .section-intro h2 {
+        font-size: 1.8rem; /* Reduces the font size on smaller screens */
+    }
+
+    .section-intro p {
+        font-size: 1rem; /* Reduces the font size on smaller screens */
+    }
+}
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
