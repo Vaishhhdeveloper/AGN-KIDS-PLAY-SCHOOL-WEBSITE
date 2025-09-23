@@ -27,18 +27,30 @@
     <header class="header">
         <div class="logo">
             <img src="images/AGN_logo-removebg-preview.png" alt="AGN Kids Play School Logo">
-            <span>AGN KIDS<br>PLAY SCHOOL</span>
+            <span style="color: #000;">AGN KIDS<br>PLAY SCHOOL</span>
         </div>
-        <!-- <button class="hamburger" id="hamburger-menu">
-        <i class="fas fa-bars"></i>
-        </button> -->
-        <nav class="navbar">
+        
+        <!-- <nav class="navbar">
             <a href="index.html" class="nav-item">Home</a>
             <a href="About.html" class="nav-item">About</a>
             <a href="services.html" class="nav-item">Services</a>
             <a href="programs.html" class="nav-item">Programs</a>
             <a href="contact.html" class="nav-item">Contact</a>
-        </nav>
+        </nav> -->
+        <nav class="navbar">
+          <button class="hamburger" aria-label="Toggle menu">
+            ☰
+          </button>
+          <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="About.html" class="nav-item">About</a>
+          <a href="services.html" class="nav-item">Services</a>
+          <a href="programs.html" class="nav-item">Programs</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </div>
+       </nav>
+
+
     </header>
      <main class="hero-section">
         <div class="hero-content">
@@ -170,6 +182,91 @@
   </div>
  </div>
 </div>
+<!-- testimonials -->
+<!-- ====== Testimonials Section Start ====== -->
+<section class="testimonials">
+  
+  <!-- Top Wave -->
+  <div class="wave-top">
+    <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#ffb6b9" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,85.3C384,85,480,75,576,85.3C672,96,768,128,864,128C960,128,1056,96,1152,85.3C1248,75,1344,85,1392,90.7L1440,96L1440,0L0,0Z"></path>
+    </svg>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">What Parents Say ❤️</h2>
+
+    <div class="owl-carousel testimonials-carousel">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <span class="decor-icon star">⭐</span>
+        <p class="testimonial-text">"This playschool is amazing! My child has become more confident and creative. Teachers are very caring."</p>
+        <div class="parent-info">
+          <img src="https://i.pravatar.cc/100?img=1" alt="Parent 1">
+          <h4>Ramesh Kumar</h4>
+          <span>Father of Aarav</span>
+        </div>
+        <span class="decor-icon balloon">🎈</span>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <span class="decor-icon toy">🧸</span>
+        <p class="testimonial-text">"A safe and fun environment. My daughter enjoys every day at school and loves her teachers."</p>
+        <div class="parent-info">
+          <img src="https://i.pravatar.cc/100?img=2" alt="Parent 2">
+          <h4>Anita Sharma</h4>
+          <span>Mother of Meera</span>
+        </div>
+        <span class="decor-icon star">✨</span>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <span class="decor-icon balloon">🎈</span>
+        <p class="testimonial-text">"The activities are well planned and engaging. My child has learned so much while having fun!"</p>
+        <div class="parent-info">
+          <img src="https://i.pravatar.cc/100?img=3" alt="Parent 3">
+          <h4>Vikram Singh</h4>
+          <span>Father of Kabir</span>
+        </div>
+        <span class="decor-icon toy">🪀</span>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <span class="decor-icon star">🌟</span>
+        <p class="testimonial-text">"The playschool feels like a second home. Teachers give personal attention to every kid."</p>
+        <div class="parent-info">
+          <img src="https://i.pravatar.cc/100?img=4" alt="Parent 4">
+          <h4>Priya Nair</h4>
+          <span>Mother of Diya</span>
+        </div>
+        <span class="decor-icon balloon">🎉</span>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <span class="decor-icon toy">🚂</span>
+        <p class="testimonial-text">"Great place for kids to grow emotionally, socially, and academically. Highly recommended!"</p>
+        <div class="parent-info">
+          <img src="https://i.pravatar.cc/100?img=5" alt="Parent 5">
+          <h4>Arjun Mehta</h4>
+          <span>Father of Riya</span>
+        </div>
+        <span class="decor-icon star">⭐</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Wave -->
+  <div class="wave-bottom">
+    <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#a0e7e5" fill-opacity="1" d="M0,32L40,58.7C80,85,160,139,240,149.3C320,160,400,128,480,106.7C560,85,640,75,720,90.7C800,107,880,149,960,160C1040,171,1120,149,1200,128C1280,107,1360,85,1400,74.7L1440,64L1440,320L0,320Z"></path>
+    </svg>
+  </div>
+</section>
+<!-- ====== Testimonials Section End ====== -->
 
     <!-- footer -->
  <footer class="site-footer">
@@ -218,5 +315,15 @@
     </footer>
 
 <script type="text/javascript" src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+  });
+</script>
 </body>
 </html>

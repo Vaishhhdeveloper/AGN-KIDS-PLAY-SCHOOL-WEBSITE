@@ -29,14 +29,28 @@
             <img src="images/AGN_logo-removebg-preview.png" alt="AGN Kids Play School Logo">
             <span>AGN KIDS<br>PLAY SCHOOL</span>
         </div>
-        <nav class="navbar">
+        <!-- <nav class="navbar">
             <a href="index.html" class="nav-item">Home</a>
             <a href="About.html" class="nav-item">About</a>
             <a href="services.html" class="nav-item">Services</a>
             <a href="programs.html" class="nav-item">Programs</a>
             <a href="contact.html" class="nav-item">Contact</a>
-        </nav>
+        
+        </nav> -->
+         <nav class="navbar">
+          <button class="hamburger" aria-label="Toggle menu">
+            ☰
+          </button>
+          <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="About.html" class="nav-item">About</a>
+          <a href="services.html" class="nav-item">Services</a>
+          <a href="programs.html" class="nav-item">Programs</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </div>
+       </nav>
     </header>
+    
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-section about">
@@ -83,5 +97,15 @@
     </footer>
 
 <script type="text/javascript" src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+  });
+</script>
 </body>
 </html>

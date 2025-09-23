@@ -29,14 +29,105 @@
             <img src="images/AGN_logo-removebg-preview.png" alt="AGN Kids Play School Logo">
             <span>AGN KIDS<br>PLAY SCHOOL</span>
         </div>
-        <nav class="navbar">
+        <!-- <nav class="navbar">
              <a href="index.html" class="nav-item">Home</a>
             <a href="About.html" class="nav-item">About</a>
             <a href="services.html" class="nav-item">Services</a>
             <a href="programs.html" class="nav-item">Programs</a>
             <a href="contact.html" class="nav-item">Contact</a>
-        </nav>
+        </nav> -->
+         <nav class="navbar">
+          <button class="hamburger" aria-label="Toggle menu">
+            ☰
+          </button>
+          <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="About.html" class="nav-item">About</a>
+          <a href="services.html" class="nav-item">Services</a>
+          <a href="programs.html" class="nav-item">Programs</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </div>
+       </nav>
     </header>
+    <!-- ===== About Us Section ===== -->
+<section class="about-page">
+
+  <!-- Our Story -->
+  <div class="story-section">
+    <div class="story-content">
+      <h2>Our Story</h2>
+      <p>
+        AGN Kids Playschool was founded with a dream of blending fun and
+        learning. Since <b>2025</b>, we’ve been creating a happy, colorful, and
+        safe place for children to explore, imagine, and grow.
+      </p>
+    </div>
+    <div class="story-image">
+      <img src="https://www.shutterstock.com/image-vector/illustration-school-kids-studying-classroom-600nw-348133622.jpg" alt="Our Story">
+    </div>
+  </div>
+
+  <!-- Leadership -->
+  <div class="leadership">
+    <h2>👩‍🏫 Meet Our Leaders</h2>
+    <div class="leader-cards">
+      <div class="leader-card">
+        <div class="leader-front">
+          <img src="https://img.freepik.com/premium-photo/happy-man-ai-generated-portrait-user-profile_1119669-1.jpg" alt="Founder">
+          <h3>Mr. A Bala Gokul (B.Com C.S. , MBA(HR mgmt.))</h3>
+          <p>Founder</p>
+        </div>
+        <div class="leader-back">
+          <blockquote>“Every child is a unique flower.”</blockquote>
+          <p>📞 +91 8838246715</p>
+        </div>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-front">
+          <img src="https://asset.gecdesigns.com/img/wallpapers/beautiful-young-woman-ai-generated-wallpaper-sr10092405-cover.webp" alt="Principal">
+          <h3>Mrs. B Vijaya Sowmiya (B.E. Civil) </h3>
+          <p>Principal</p>
+        </div>
+        <div class="leader-back">
+          <blockquote>“Making learning joyful and meaningful.”</blockquote>
+          <p>📞 +91 9080536121</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fun Stats -->
+  <div class="stats">
+    <div class="stat-item">
+      <div class="balloons"><span class="counter" data-target="2025">2025</span></div>
+      <p>Founded Year</p>
+    </div>
+    <div class="stat-item">
+      <div class="balloons"><span class="counter" data-target="50">50</span>+</div>
+      <p>Happy Students</p>
+    </div>
+  </div>
+
+  <!-- Mission Vision Values -->
+  <div class="values">
+    <h2>✨ Our Mission, Vision & Values</h2>
+    <div class="value-cards">
+      <div class="value-card mission">
+        <h3>🎯 Mission</h3>
+        <p>To spark curiosity and build confidence in every child.</p>
+      </div>
+      <div class="value-card vision">
+        <h3>🌟 Vision</h3>
+        <p>To nurture little minds into compassionate leaders.</p>
+      </div>
+      <div class="value-card core">
+        <h3>💖 Core Values</h3>
+        <p>Love, Respect, Curiosity, Creativity, and Playfulness.</p>
+      </div>
+    </div>
+  </div>
+</section>
    <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-section about">
@@ -82,5 +173,15 @@
         </div>
     </footer>
 <script type="text/javascript" src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+  });
+</script>
 </body>
 </html>
