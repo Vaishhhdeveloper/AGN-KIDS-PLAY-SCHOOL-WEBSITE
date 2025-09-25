@@ -154,7 +154,7 @@ body {
 
 .nav-item {
   text-decoration: none;
-  color: #000000;
+  color: #000;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -405,6 +405,7 @@ input[type="text"],
 input[type="tel"],
 input[type="number"],
 select {
+    font-family: 'delius', 'Epunda Sans', sans-serif;
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #e0e0e0;
@@ -488,6 +489,7 @@ select {
 .footer-section h3 {
     color: #fff;
     font-weight: 600;
+    font-size: 23px;
     margin-bottom: 20px;
 }
 
@@ -511,19 +513,19 @@ select {
 }
 
 .logo-container h3 {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     margin: 0;
     color: #fff;
 }
 
 .taglines {
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     margin: 0;
 }
 
-.description {
+.descriptions {
     font-size: 0.9rem;
     line-height: 1.6;
     max-width: 350px;
@@ -537,7 +539,7 @@ select {
 
 .contact-info .label {
     font-weight: 600;
-    color: #db5c7af9; /* Example color for "Founder" and "Principal" */
+    color: #FFDF00; /* Example color for "Founder" and "Principal" */
 }
 
 .footer-section ul {
@@ -555,7 +557,7 @@ select {
 .footer-section ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: color 0.3s;
     display: flex;
     align-items: center;
@@ -629,7 +631,123 @@ select {
   color: #666;
   line-height: 1.5;
 }
+ .container {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto; /* Center horizontally */
+      padding: 20px;
+    }
 
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icons {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #fff;
+      margin: 0 auto 15px;
+    }
+
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .info-box {
+      background: #fff0f0;
+      border: 1px solid #f5b5b5;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .info-box strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .info-box .highlight {
+      color: #e65c00;
+      font-weight: bold;
+    }
+
+    .info-box .phone {
+      color: #e6004c;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    .features {
+      text-align: left;
+    }
+
+    .features li {
+      list-style: none;
+      margin-bottom: 8px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .features li::before {
+      content: "●";
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    /* Different colors for each card */
+    .icon1 { background: #ff6600; }
+    .features li::before { color: #ff6600; }
+
+    .icon2 { background: #0077cc; }
+    .card:nth-child(2) .features li::before { color: #0077cc; }
+
+    .icon3 { background: #28a745; }
+    .card:nth-child(3) .features li::before { color: #28a745; }
+
+    .icon4 { background: #8e44ad; }
+    .card:nth-child(4) .features li::before { color: #8e44ad; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      .card {
+        padding: 15px;
+      }
+      .card h2 {
+        font-size: 20px;
+      }
+      .card p {
+        font-size: 14px;
+      }
+    }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -843,7 +961,7 @@ select {
 .story-content h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #ff6b6b;
+  color: #ff6b6bc7;
 }
 .story-content p { font-size: 1.1rem; line-height: 1.6; }
 .story-image { flex: 1; text-align: center; }
@@ -945,6 +1063,200 @@ select {
 .mission { background: #ff6b6b; }
 .vision { background: #6c5ce7; }
 .core { background: #00b894; }
+.programs-section {
+      background: transparent;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    /* Top border */
+    /* .programs-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: gold;
+    } */
+
+    /* Heading */
+    .programs-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .programs-section h2 span {
+      background: linear-gradient(90deg, #d946ef, #6366f1, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Description */
+    .programs-section p {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .cards-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .program-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-left, .card-right {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card-left {
+      border-right: 1px solid #eee;
+    }
+
+    /* Icon */
+    .program-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      margin-right: 12px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .badge {
+      display: inline-block;
+      background: gold;
+      color: #333;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #333;
+      margin: 15px 0;
+      line-height: 1.5;
+    }
+
+    .highlights-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .highlights-title span {
+      margin-left: 6px;
+    }
+
+    .highlights li {
+      list-style: none;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    /* Right section */
+    .card-right h4 {
+      margin-bottom: 12px;
+    }
+
+    .curriculum li {
+      list-style: none;
+      background: #f9fafc;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .curriculum .dot {
+      margin-right: 10px;
+    }
+
+    /* Colors per card */
+    .card1 .icon, .card1 .dot { background: #3b82f6; }
+    .card2 .icon, .card2 .dot { background: #ef4444; }
+    .card3 .icon, .card3 .dot { background: #10b981; }
+    .card4 .icon, .card4 .dot { background: #f59e0b; }
+    .card5 .icon, .card5 .dot { background: #8b5cf6; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .program-card {
+        flex-direction: column;
+      }
+      .card-left {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .programs-section h2 {
+        font-size: 2rem;
+      }
+      .programs-section p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .programs-section h2 {
+        font-size: 1.6rem;
+      }
+      .programs-section p {
+        font-size: 0.95rem;
+      }
+    }
 
 /* Responsive */
 @media (max-width: 768px) {
