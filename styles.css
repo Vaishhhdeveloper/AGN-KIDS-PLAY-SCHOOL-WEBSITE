@@ -335,7 +335,7 @@ h1 .blue-text {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     background: linear-gradient(#e6e2e2dd, #80bdf2);
     background: transparent;

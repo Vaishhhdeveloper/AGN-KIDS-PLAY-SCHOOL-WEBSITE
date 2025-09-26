@@ -68,7 +68,7 @@
     </main>
     <div class="form-page-container">
         <div class="left-illustration">
-            <img src="https://thumbs.dreamstime.com/b/group-happy-cartoon-kids-eps-group-happy-cartoon-kids-363371508.jpg" alt="Children playing illustration" style="max-width: 100%; height: auto; display: block; margin: auto;">
+            <img src="images/classroom.jpg" alt="Children playing illustration" style="max-width: 100%; height: auto; display: block; margin: auto;">
         </div>
 
         <div class="form-wrapper">
@@ -76,7 +76,7 @@
                 <h2>Admission Inquiry</h2>
                 <p class="form-subtitle">Fill out the form below and we'll get in touch!</p>
 
-                <form>
+                <form id="inquiryForm">
                     <div class="form-group-row">
                         <div class="form-group">
                             <label for="parentName">Parent's Name *</label>
@@ -316,15 +316,60 @@
 
 <script type="text/javascript" src="script.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    document.addEventListener('DOMContentLoaded', function () {
+        // --- EXISTING HAMBURGER MENU CODE ---
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', function () {
-      navLinks.classList.toggle('show');
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
+        });
+
+        // ------------------------------------
+
+        // --- NEW WHATSAPP FORM SUBMISSION CODE ---
+        const form = document.getElementById('inquiryForm');
+        const submitButton = form.querySelector('.submit-button');
+        const whatsappNumber = '918838246715'; // Replace with your number
+
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return; 
+            }
+            // 4. Get all form values
+        const parentName = document.getElementById('parentName').value;
+        const kidName = document.getElementById('kidName').value;
+        const parentContact = document.getElementById('parentContact').value;
+        const kidAge = document.getElementById('kidAge').value;
+        const classOfInterest = document.getElementById('classOfInterest').value;
+        
+        // Convert the value to a readable class name (e.g., 'playgroup' -> 'Playgroup')
+        const selectedClass = classOfInterest.charAt(0).toUpperCase() + classOfInterest.slice(1);
+
+        // 5. Construct the WhatsApp message
+        let message = `*New School Inquiry*\n\n`;
+        message += `Parent Name: ${parentName}\n`;
+        message += `Kid's Name: ${kidName || 'N/A'}\n`;
+        message += `Parent Contact: ${parentContact}\n`;
+        message += `Kid's Age: ${kidAge || 'N/A'}\n`;
+        message += `Class of Interest: ${selectedClass}\n`;
+
+        // 6. Encode the message for the URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // 7. Create the WhatsApp URL
+        // wa.me/number?text=message
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+        // 8. Redirect the user
+        window.open(whatsappURL, '_blank');
+           
+        });
+        // -----------------------------------------
     });
-  });
-  
 </script>
 </body>
 </html>
