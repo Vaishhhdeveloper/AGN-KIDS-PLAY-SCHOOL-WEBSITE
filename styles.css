@@ -1067,7 +1067,7 @@ select {
       background: transparent;
       text-align: center;
       padding: 80px 20px;
-      position: relative;
+      /* position: relative; */
     }
 
     /* Top border */
