@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+    <loc>https://www.agnkidsplayschool.in/</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.agnkidsplayschool.in/index.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.agnkidsplayschool.in/About.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.agnkidsplayschool.in/services.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+   <!-- programs page -->
+   <url>
+    <loc>https://www.agnkidsplayschool.in/programs.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.agnkidsplayschool.in/contact.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
