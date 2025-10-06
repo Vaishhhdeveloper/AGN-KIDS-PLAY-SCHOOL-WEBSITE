@@ -116,3 +116,85 @@
     height: 450px; /* Example: Changed from 300px to 450px */
   }
 }
+/* Section styling */
+.happy-moments {
+  text-align: center;
+  background: #fffaf0;
+  padding: 60px 20px;
+}
+
+.happy-moments h2 {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+/* Grid gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrolling strip */
+.event-strip {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #ffefd5;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.strip-track {
+  display: inline-block;
+  animation: scroll 25s linear infinite;
+}
+
+.strip-track img {
+  width: 220px;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.strip-track img:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframe for scroll animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .happy-moments h2 { font-size: 1.7rem; }
+  .section-subtitle { font-size: 1rem; }
+  .strip-track img { width: 160px; }
+}
+
+@media (max-width: 480px) {
+  .happy-moments { padding: 40px 15px; }
+  .gallery-grid { gap: 10px; }
+  .strip-track img { width: 130px; }
+}

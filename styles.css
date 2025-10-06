@@ -3,7 +3,8 @@ body {
     font-family: 'delius', 'Epunda Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#e6e2e2, #80bdf2); 
+    /* background: linear-gradient(#e6e2e2, #80bdf2);  */
+    background: #fffaf0;
     color: #333;
 }
 
@@ -417,7 +418,7 @@ select {
     -webkit-appearance: none; /* Remove default styling for selects on iOS */
     -moz-appearance: none; /* Remove default styling for selects on Firefox */
     appearance: none; /* Remove default styling for selects */
-    background-color: #fcfcfc;
+    background-color: #ffff;
 }
 
 input::placeholder {
@@ -944,7 +945,8 @@ select {
 .about-page {
   font-family: "delius", sans-serif;
   padding: 60px 20px;
-  background: linear-gradient(#e6e2e2dd, #80bdf2);
+  /* background: linear-gradient(#e6e2e2dd, #80bdf2); */
+  background: #fffaf0;
   color: #333;
   overflow-x: hidden;
 }
