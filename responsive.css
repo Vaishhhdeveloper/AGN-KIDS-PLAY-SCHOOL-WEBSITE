@@ -83,65 +83,7 @@
   font-size: 14px;
   color: #444;
 }
-/* Social icons section */
-.social-icons {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-}
 
-.social-icons a {
-  font-size: 32px;
-  color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effects */
-.social-icons a.whatsapp:hover {
-  color: #25D366; /* WhatsApp green */
-  transform: scale(1.2);
-}
-
-.social-icons a.instagram:hover {
-  color: #E1306C; /* Instagram pink */
-  transform: scale(1.2);
-}
-/* === Top Right Social Icons === */
-.top-social-icons {
-  position: absolute;
-  top: 170px; /* Adjust based on navbar height */
-  right: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.top-social-icons a {
-  font-size: 20px;
-  color: #fff;
-  background-color: #a653aac8; /* Main purple tone */
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-
-/* Hover colors for branding */
-.top-social-icons a.whatsapp:hover {
-  background-color: #25D366;
-}
-.top-social-icons a.email:hover {
-  background-color: #ffb347;
-}
-.top-social-icons a.instagram:hover {
-  background-color: #E1306C;
-}
 .info-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -173,86 +115,10 @@
   color: #555;
   line-height: 1.6;
 }
-.founders-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 40px 60px;
-  /* background-color: #f7f4fc; */
-}
-
-.founder-box {
-  background: white;
-  text-align: center;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.founder-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-.founder-box i {
-  font-size: 40px;
-  color: #a653aac8; /* Theme purple */
-  background: #f0e1ff;
-  padding: 20px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.founder-box h3 {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.founder-box p {
-  color: #555;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .founders-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .founders-section {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  .top-social-icons {
-    top: auto;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    justify-content: center;
-    background: rgba(166, 83, 170, 0.1);
-    padding: 10px 0;
-    position: absolute;
-  }
-} */
-
 /* Responsive design */
 @media (max-width: 768px) {
   .contact-info-right {
     text-align: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-
-  .social-icons a {
-    font-size: 22px;
   }
 }
 
